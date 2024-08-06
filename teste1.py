@@ -26,6 +26,7 @@ def insert_data():
         cur.execute('INSERT INTO testepostgres1 (Tensão, corrente)  VALUES (%s, %s)', (value1, value2,))
         conn.commit()
         cur.close()
+        conn.close()
 
         return jsonify(data), 201
     else:
