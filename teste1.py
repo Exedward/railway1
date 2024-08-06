@@ -20,11 +20,11 @@ def insert_data():
         if not value:
             return jsonify({"Erro": "Nenhum valor passado."}), 400
         
-        conn = get_db_connection()
-        cur = conn.cursor()
-        cur.execute('INSERT INTO (Tensão, Corrente)  VALUES (%f)', value)
-        conn.commit()
-        cur.close()
+        #conn = get_db_connection()
+        #cur = conn.cursor()
+        #cur.execute('INSERT INTO (Tensão, Corrente)  VALUES (%f)', value)
+        #conn.commit()
+        #cur.close()
 
         return jsonify({"Mensagem": "Dados inseridos com sucesso!"}), 201
     else:
