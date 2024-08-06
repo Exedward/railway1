@@ -16,15 +16,16 @@ def get_db_connection():
 def insert_data():
     if request.is_json:
         data = request.get_json()
-        value = data.get('value')
-        if not value:
-            return jsonify({"Erro": "Nenhum valor passado."}), 400
+        value1 = data.get('value1')
+        value2 = data.get('value2')
+        #if not value1:
+        #    return jsonify({"Erro": "Nenhum valor passado."}), 400
         
-        #conn = get_db_connection()
-        #cur = conn.cursor()
-        #cur.execute('INSERT INTO (Tensão, Corrente)  VALUES (%f)', value)
-        #conn.commit()
-        #cur.close()
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute('INSERT INTO (Tensão, corrente)  VALUES (%f, %f)', value1, value2)
+        conn.commit()
+        cur.close()
 
         return jsonify(data), 201
     else:
