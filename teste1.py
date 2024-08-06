@@ -26,7 +26,7 @@ def insert_data():
         #conn.commit()
         #cur.close()
 
-        return jsonify({"Mensagem": "Dados inseridos com sucesso!"}), 201
+        return jsonify(data), 201
     else:
         return jsonify({"Erro": "A requisição deve ser um json"}), 400
     
