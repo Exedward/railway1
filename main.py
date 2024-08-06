@@ -31,4 +31,4 @@ def insert_data():
         return jsonify({"Erro": "A requisição deve ser um json"}), 400
     
 if __name__ == '__name__':
-    app.run(debug = True, host = '0.0.0.0', port = int(os.environ.get('PORT', 5000)))
+    app.run(debug = True, host = '0.0.0.0', port = 5000))
