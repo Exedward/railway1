@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/data', methods = ['POST'])
+@app.route('/data', methods = ['GET'])
 def insert_data():
     if request.is_json:
         data = request.get_json()
