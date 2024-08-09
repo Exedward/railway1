@@ -24,7 +24,7 @@ def insert_data():
         
         conn = get_db_connection()
         cur = conn.cursor()
-        cur.execute('INSERT INTO testepostgres5 (tensão, corrente, data)  VALUES (%s, %s, %s)', (value1, value2, value3))
+        cur.execute('INSERT INTO testepostgres1 (corrente, tempo)  VALUES (%s, %s)', (value2, value3))
         conn.commit()
         cur.close()
         conn.close()
